@@ -155,6 +155,7 @@ button{
     width: calc((100% - 3 * 24px) / 4);
 }
 .benefits-subtitle{
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
