@@ -1,3 +1,4 @@
+/* #region general*/
 body{
     font-family: "Roboto",
         sans-serif;
@@ -16,19 +17,27 @@ a{
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
+button{
+    cursor: pointer;
+}
 .container{
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 
 }
-
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+/* #endregion */
+/* #region header */
 .page-header{
     border-bottom: 1px solid #e7e9fc;
 }
 .header-container{
     display: flex;
-    aling-items: center;
+    align-items: center;
 }
 .nav-header{
     display: flex;
@@ -37,12 +46,12 @@ h1, h2, h3, h4, h5, h6, p{
 
 .logo{
     font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #2e2f42;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2e2f42;
 }
 .logo-header{
     padding: 24px 0;
@@ -87,10 +96,8 @@ h1, h2, h3, h4, h5, h6, p{
     letter-spacing: 0.02em;
     color: #434455;
 }
-.section{
-    padding-top: 120px;
-    padding-bottom: 120px; 
-}
+/* #endregion */
+/* #region hero */
 .hero-container{
     display: flex;
     align-items: center;
@@ -98,32 +105,52 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .hero{
     background-color: #2e2f42;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 .hero-title{
-    padding: auto;
+    width: 496px;
     margin-bottom: 48px;
-        font-size: 56px;
-        line-height: 1.07;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #fff;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
 }
-h1 span{
-    display: block;
-}
-/* закінчила тут, треба налаштувати кнопку */
 .hero-btn{
-    cursor: pointer;
+    border-radius: 4px;
+    padding: 16px 32px;
     background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color:#fff
+    color:#fff;
 }
 .hero-btn:hover,
 .hero-btn:focus{
-    background-color: #404bbf;;
+    background-color: #404bbf;
+}
+/* #endregion */
+/* #region benefits */
+.visually-hidden{
+    position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.benefits-list{
+    display: flex;
+    justify-content: space-between;
+}
+.benefits-item{
+    width: calc((100% - 3 * 24px) / 4);
 }
 .benefits-subtitle{
     font-weight: 500;
@@ -137,70 +164,119 @@ h1 span{
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+/* #endregion */
+/* #region team */
 .team{
     background-color: #f4f4fd;
 }
 .team-title{
+    margin-bottom: 72px;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
 }
+.team-list{
+    display: flex;
+    justify-content: space-between;
+}
 .team-item{
+    width: calc((100% - 3 * 24px) / 4);
     background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.team-img{
+  display: block;
 }
 .team-name{
+    padding-top: 32px;
+    margin-bottom: 8px;
     font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #2e2f42;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
 }
 .team-text{
+    padding-bottom: 32px;
     font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
-
+/* #endregion */
+/* #region portfolio */
 .portfolio-title{
+    padding-bottom: 72px;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
 }
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+.potfolio-item{
+ width: calc((100% - 2 * 24px) /3 );
+}
+.portfolio-img{
+    display: block;
+}
+.portfolio-text-wrap{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+}
 .portfolio-subtitle{
+margin-bottom: 8px;
     font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
 }
 .portfolio-text{
     letter-spacing: 0.02em
+}
+/* #endregion */
+/* #region footer */
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .footer{
     background-color: #2e2f42;
 }
 .logo-footer{
-            font-family: "Raleway",
-                    sans-serif;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 1.17;
-                letter-spacing: 0.03em;
-                text-transform: uppercase;
-                color: #f4f4fd;
+    margin-bottom: 16px;
+    width: 115px;
+    font-family: "Raleway",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #f4f4fd;
 }
 .logo-footer .logo-part{
     color: #4d5ae5;
 }
 .footer-text{
+    width: 264px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
+/* #endregion */
